@@ -1,0 +1,24 @@
+
+
+<section>
+    <img src="assets/r2d2.png" alt="R2d2 image">
+   
+    <h1>Select starwars characters you prefer</h1>
+      
+
+    <form action="/starwarsresult" method="POST">
+        <div class="grid-container">
+            {{#each characters}}
+                <div class="grid-item">
+                    <span>{{this}}</span>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="classification" id="classification[{{this}}]" name="classification[]" value="{{this}}">
+                        <label for="classification[{{this}}]" class="checkmark"></label>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+

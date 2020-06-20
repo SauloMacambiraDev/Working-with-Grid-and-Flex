@@ -1,0 +1,22 @@
+{
+  "name": "CssFlexboxDemo",
+  "version": "1.0.0",
+  "description": "Demo project working with Grid and Flexbox layout",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon --inspect src/server.js"
+  },
+  "author": "Saulo Macambira",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "knex": "^0.21.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

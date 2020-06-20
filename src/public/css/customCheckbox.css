@@ -1,0 +1,105 @@
+/* Checkbox css customization */
+div.checkbox-wrapper {
+    position: relative;
+}
+
+.checkmark {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 10px;
+    transition: background-color .4s;
+}
+
+.classification:checked ~ .checkmark {
+    background-color: #08bb68;
+}
+
+input[type=checkbox].classification{
+    display: none;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    top: 5px;
+    left: 14px;
+    transform: rotateZ(40deg) scale(5);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.classification:checked ~ .checkmark::after {
+    opacity: 1;
+    transform: rotateZ(40deg) scale(1);
+}
+
+/* Checkbox css customization end */
+
+section {
+    width: 80%;
+    margin: 32px auto 96px auto;
+    text-align: center;
+}
+section img {
+    object-fit: cover;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+section h1 {
+    margin: 12px 0;
+    color: #FFF;
+    
+}
+
+/* Form customization */
+section form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section form div.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    width: 100%;
+    /* justify-items: center; */
+    /* border: 1px solid #FFF; */
+}
+
+section form div.grid-container div.grid-item {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+section form div.grid-container div.grid-item span{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 16px;
+    width: 100px;
+}
+
+section form button{
+    color: rgb(99, 71, 194);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 32px;
+    width: 300px;
+    background-color: #f0f01e;
+    border: none;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+/* End Form customization */

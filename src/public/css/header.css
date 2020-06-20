@@ -1,0 +1,46 @@
+header {
+    background-color: #f0f01e;
+    padding: 32px;
+    text-align: center;
+}
+
+header h1{
+    color: rgb(99, 71, 194);
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+header ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    margin-right: 16px;
+}
+
+header ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: #FFF;
+    opacity: 0.8;
+    border-radius: 16px;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+header ul li a:hover {
+    opacity: 1;
+}
+
+header ul li img {
+    margin-right: 16px;
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
