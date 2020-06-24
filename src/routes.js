@@ -25,17 +25,24 @@ router.get('/customCheckboxes', async (req,res,next) => {
 
 router.post('/starwarsresult', async (req,res,next) => {
     try {
-        const payload = req.body;
+        const { classifications } = req.body;
 
         const response = await axios.get(`https://swapi.dev/api/people/`)
         const characters = response.data.results.map(c => {
                 return c.name;
         })
 
-        console.log(payload)
-        return res.redirect('customCheckbox', { style: 'customCheckbox.css', payload, characters })
+        console.log(classifications)
+
+        return res.redirect('customCheckbox', 
+        { 
+          style: 'customCheckbox.css', 
+          payload: payload, 
+          characters: characters 
+        })
     } catch (error) {
-        return res.redirect('customCheckbox', {style: 'customCheckbox.css', error})
+        console.log(error)
+        return res.redirect('customCheckbox', {style: 'customCheckbox.css'})
     }
 })
 
